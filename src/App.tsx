@@ -1,16 +1,17 @@
-import './App.css'
 import GetMovie from "./GetMovie";
 import NavBar from "./NavBar";
+import Movie from './Movie';
 
-//const API_URL = `https://api.themoviedb.org/4/list/8175818?page=1&api_key=a79b231633cd9524b54133ecc5c8f1a5&language=pt-BR&sort_by=release_date.asc`
+//API_URL = `https://api.themoviedb.org/4/list/8175818?page=1&api_key=a79b231633cd9524b54133ecc5c8f1a5&language=pt-BR&sort_by=release_date.asc`
 
 function App() {
 
   const [movieList, movieState] = GetMovie();
 
+   console.log(movieList)
+
   return (
     <>
-    <h1>Cinelux</h1>
     <NavBar movieList={movieList} movieStatus={movieState}></NavBar>
 
     {/* {movieList.map((movie:Movie)=>{
