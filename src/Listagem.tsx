@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import Card from "./Card";
 import Movie from "./Movie"
 import MovieShow from "./MovieShow"
 
@@ -7,19 +6,19 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
     const [activeMovieList, setActiveMovieList] = useState<any[]>([]);
 
     useEffect(function (): void {
-        if (listNumber === '1960-1995') { 
+        if (listNumber === '1960+') { 
             let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) <= 1995);
             setActiveMovieList(result);
         }
-        if (listNumber === '1996-2010') { 
+        if (listNumber === '1996+') { 
             let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 1996 && parseInt(movie.release_date.substring(0, 4)) <= 2010) 
             setActiveMovieList(result)
         }
-        if (listNumber === '2011-2020') { 
+        if (listNumber === '2011+') { 
             let result =     movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2011 && parseInt(movie.release_date.substring(0, 4)) <= 2020)
             setActiveMovieList(result)
         }
-        if (listNumber === '2021-2022') { 
+        if (listNumber === '2021+') { 
             let result =     movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2021)
             setActiveMovieList(result)
         }
