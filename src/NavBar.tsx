@@ -4,6 +4,7 @@ import Movie from "./Movie";
 
 import LOGO from './assets/cinelux.png';
 
+
 function NavBar(props: { movieList: Movie[], movieStatus: any[] }): JSX.Element {
     const [listNumber, setListNumber] = useState<string>('3');
 
@@ -24,6 +25,7 @@ function NavBar(props: { movieList: Movie[], movieStatus: any[] }): JSX.Element 
                 <li className="text-xs font-bold rounded overflow-hidden px-2 py-1 hover:text-green-300 active:bg-green-500 active:text-white"  onClick={handleClick}>2021+</li>
             </ul>
         </header>
+           
             <Listagem listNumber={listNumber} movieList={props.movieList} movieStatus={props.movieStatus}/>
         </>
 

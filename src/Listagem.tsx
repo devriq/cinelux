@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react";
 import Movie from "./Movie"
 import MovieShow from "./MovieShow"
+
+import 'swiper/css'
+import { Navigation, Pagination } from 'swiper';
 
 function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
     const [activeMovieList, setActiveMovieList] = useState<any[]>([]);
@@ -26,11 +30,37 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
 
     return (
         <>
-            <section className="movie-list">
-                {activeMovieList.map((movie: Movie) => {
-                    return <MovieShow key={movie.id} movie={movie} status={movieStatus} />
+             <Swiper 
+                className="mySwiper"
+                slidesPerView={1}
+                breakpoints={{
+                    425:{
+                        slidesPerView: 2,
+                    },
+                    768:{
+                        slidesPerView: 3,
+                    },
+                    1024:{
+                        slidesPerView: 4,
+                    },
+                    1440:{
+                        slidesPerView: 5,
+                    },
+                    2560:{
+                        slidesPerView: 6,
+                    },
+                    }
+                }
+                modules={[Pagination, Navigation]}
+                >
+                {activeMovieList.map(movie => {
+                    return <SwiperSlide key={movie.id}>
+                                <MovieShow movie={movie} status={movieStatus} />
+                            </SwiperSlide>                
                 })}
-            </section>
+
+                
+            </Swiper>
         </>
     )
 }
