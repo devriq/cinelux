@@ -1,67 +1,38 @@
 import React, { useEffect, useState } from "react"
-import { Swiper, SwiperSlide } from "swiper/react";
 import Movie from "./Movie"
 import MovieShow from "./MovieShow"
 
-import 'swiper/css'
-import { Navigation, Pagination } from 'swiper';
 
 function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
     const [activeMovieList, setActiveMovieList] = useState<any[]>([]);
 
     useEffect(function (): void {
-        if (listNumber === '1960+') { 
-            let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) <= 1995);
+        if (listNumber === 'Before 2000') { 
+            let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) < 2000);
             setActiveMovieList(result);
         }
-        if (listNumber === '1996+') { 
-            let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 1996 && parseInt(movie.release_date.substring(0, 4)) <= 2010) 
+        if (listNumber === '2000+') { 
+            let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2000 && parseInt(movie.release_date.substring(0, 4)) < 2010) 
             setActiveMovieList(result)
         }
-        if (listNumber === '2011+') { 
-            let result =     movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2011 && parseInt(movie.release_date.substring(0, 4)) <= 2020)
+        if (listNumber === '2010+') { 
+            let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2010 && parseInt(movie.release_date.substring(0, 4)) < 2020)
             setActiveMovieList(result)
         }
-        if (listNumber === '2021+') { 
-            let result =     movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2021)
+        if (listNumber === '2020+') { 
+            let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2020)
             setActiveMovieList(result)
         }
     }, [listNumber, movieList]);
 
     return (
-        <>
-             <Swiper 
-                className="mySwiper"
-                slidesPerView={1}
-                breakpoints={{
-                    425:{
-                        slidesPerView: 2,
-                    },
-                    768:{
-                        slidesPerView: 3,
-                    },
-                    1024:{
-                        slidesPerView: 4,
-                    },
-                    1440:{
-                        slidesPerView: 5,
-                    },
-                    2560:{
-                        slidesPerView: 6,
-                    },
-                    }
-                }
-                modules={[Pagination, Navigation]}
-                >
+        <div className="flex justify-center flex-wrap gap-5 w-screen">
                 {activeMovieList.map(movie => {
-                    return <SwiperSlide key={movie.id}>
-                                <MovieShow movie={movie} status={movieStatus} />
-                            </SwiperSlide>                
+                    return <MovieShow key={movie.id} movie={movie} status={movieStatus} />                
                 })}
 
                 
-            </Swiper>
-        </>
+        </div>
     )
 }
 export default Listagem;
