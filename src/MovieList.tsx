@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import Movie from "./Movie"
-import MovieShow from "./MovieShow"
+import MovieCard from "./MovieCard"
+import HorrorCategoryArt from './assets/undraw_horror_movie_category.svg'
 
-
-function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
+function MovieList({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
     const [activeMovieList, setActiveMovieList] = useState<any[]>([]);
 
     useEffect(function (): void {
@@ -26,13 +26,14 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
     }, [listNumber, movieList]);
 
     return (
-        <div className="flex justify-center flex-wrap gap-5 w-screen">
-                {activeMovieList.map(movie => {
-                    return <MovieShow key={movie.id} movie={movie} status={movieStatus} />                
-                })}
-
-                
+        <div className="p-4 flex justify-center flex-wrap">
+                    { listNumber=='0' ? 
+                        <img src={HorrorCategoryArt} alt="" className="horror min-w-[300px] max-w-[400px] p-8" /> : 
+                        activeMovieList.map(movie => {
+                            return <MovieCard key={movie.id} movie={movie} status={movieStatus} /> }) 
+                    }
+                   
         </div>
-    )
+        )
 }
-export default Listagem;
+export default MovieList;
