@@ -6,9 +6,9 @@ export default function MovieShow(props: {movie: Movie; status:any[]}): JSX.Elem
   const moviePoster = "https://image.tmdb.org/t/p/w500" + props.movie.poster_path
 
   return (
-    <div className={`${movieState} hover:grayscale-0`}>
+    <div className={`${movieState} hover:grayscale-0 scale-95 hover:scale-100 transition-all`}>
 
-    <div className={`w-[200px] h-[300px] overflow-hidden rounded-md`}>
+    <div className={`w-[250px] h-[370px] overflow-hidden rounded-md`}>
       <img className={`w-full h-full object-cover transition-colors`} src={moviePoster} alt="poster"/>
     </div>
 
