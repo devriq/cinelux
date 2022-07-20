@@ -28,7 +28,7 @@ function MovieList({ listNumber, movieList, movieStatus }: { listNumber: string;
     return (
         <div className="p-4 flex justify-center flex-wrap">
                     { listNumber=='0' ? 
-                        <img src={HorrorCategoryArt} alt="" className="horror min-w-[300px] max-w-[400px] p-8" /> : 
+                        <img src={HorrorCategoryArt} alt="" className="horror min-w-[200px] max-w-[400px] " /> : 
                         activeMovieList.map(movie => {
                             return <MovieCard key={movie.id} movie={movie} status={movieStatus} /> }) 
                     }

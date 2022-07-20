@@ -16,7 +16,7 @@ function App() {
   const [movieList, movieState] = GetMovie();
 
   return (
-    <div className="app h-screen flex flex-col justify-between">
+    <div className="app h-screen w-screen flex flex-col justify-between">
         <NavBar movieList={movieList} movieStatus={movieState} />    
         <Footer/>
     </div>
