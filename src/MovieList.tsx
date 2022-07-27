@@ -26,7 +26,7 @@ function MovieList({ listNumber, movieList, movieStatus }: { listNumber: string;
     }, [listNumber, movieList]);
 
     return (
-        <div className="p-4 flex justify-center flex-wrap">
+        <div className="flex justify-center gap-3 flex-wrap">
                     { listNumber=='0' ? 
                         <img src={HorrorCategoryArt} alt="" className="horror min-w-[200px] max-w-[400px] " /> : 
                         activeMovieList.map(movie => {
