@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import Movie from "./Movie.1";
+import Movie from "./Movie";
 
 import LOGO from "./assets/cinelux.png";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
