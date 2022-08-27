@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Movie from "./Movie";
+import Movie from "./Movie.1";
 
 function GetMovie (){
 

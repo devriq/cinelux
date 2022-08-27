@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <div className="flex justify-center items-center gap-3 flex-wrap w-[100vw]">
-      {topMovies.map((movie:Movie)=>
+      {topMovies.map((movie:Movie): JSX.Element=>
       <MovieCard key={movie.id} id={movie.id} title={movie.title} overview={movie.overview} poster_path={movie.poster_path} release_date={movie.release_date} />)}
     </div>
   )

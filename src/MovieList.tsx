@@ -30,7 +30,7 @@ function MovieList({ listNumber, movieList, movieStatus }: { listNumber: string;
                     { listNumber=='0' ? 
                         <img src={HorrorCategoryArt} alt="" className="horror min-w-[200px] max-w-[400px] " /> : 
                         activeMovieList.map(movie => {
-                            return <MovieCard key={movie.id} movie={movie} status={movieStatus} /> }) 
+                            return <MovieCard id={0} title={""} overview={""} poster_path={""} release_date={""} /> }) 
                     }
                    
         </div>
