@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Movie from "./Movie.1";
+import Movie from "./Movie";
 import MovieDetail from './pages/MovieDetail';
 
 import { Link } from 'react-router-dom';
