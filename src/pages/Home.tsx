@@ -1,10 +1,10 @@
 import React from 'react'
-import GetMovie from '../extras/GetMovie';
+import GetMovie from '../GetMovie';
 import Movie from './../Movie';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-import MovieCard from '../components/MovieCard';
+import MovieCard from '../MovieCard';
 
 function Home() {
   
