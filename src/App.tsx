@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 function App() {
   return (
-    <div className="w-[100vw] h-[100vh] flex flex-col justify-between">
+    <div className="w-full h-[100vh] flex flex-col justify-between">
       <Navbar/>
       <Outlet></Outlet>
       <Footer/>

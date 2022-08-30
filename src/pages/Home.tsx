@@ -24,7 +24,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap w-[100vw]">
+    <div className="w-full flex justify-center items-center gap-4 flex-wrap">
       {topMovies.map((movie:Movie): JSX.Element=>
       <MovieCard key={movie.id} id={movie.id} title={movie.title} overview={movie.overview} poster_path={movie.poster_path} release_date={movie.release_date} />)}
     </div>
