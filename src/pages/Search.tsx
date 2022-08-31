@@ -16,12 +16,14 @@ function Search() {
   const [searchMovies, setSearchMovies] = useState([]);
 
   const getSearchMovies = async (url: string) => {
+    console.log(url)
     await axios.get(url)
       .then((response) => setSearchMovies(response.data.results));
   };
 
   useEffect(() => {
     const apiURL = `${searchURL}?api_key=${apiKey}&query=${query}`;
+    console.log(apiURL)
     getSearchMovies(apiURL);
   }, [query]);
 
