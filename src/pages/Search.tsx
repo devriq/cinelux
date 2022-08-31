@@ -4,7 +4,6 @@ import { useSearchParams } from 'react-router-dom';
 import MovieCard from '../MovieCard';
 import Movie from "../Movie";
 
-
 function Search() {
   
   const searchURL = import.meta.env.VITE_API_SEARCH;
@@ -16,14 +15,14 @@ function Search() {
   
   const [searchMovies, setSearchMovies] = useState([]);
 
-  const getSearchMovies = async ({ url }: { url: any; }): Promise<void> => {
+  const getSearchMovies = async (url: string) => {
     await axios.get(url)
       .then((response) => setSearchMovies(response.data.results));
   };
 
   useEffect(() => {
     const apiURL = `${searchURL}?api_key=${apiKey}&query=${query}`;
-    getSearchMovies({ url: apiURL });
+    getSearchMovies(apiURL);
   }, [query]);
 
   return (
