@@ -29,7 +29,7 @@ function Search() {
 
   return (
 
-    <div className="flex justify-center items-center gap-3 flex-wrap max-w-[1200px]">
+    <div className="flex flex-wrap justify-center">
       {searchMovies.map((movie:Movie)=>
       <MovieCard key={movie.id} id={movie.id} title={movie.title} overview={movie.overview} poster_path={movie.poster_path} release_date={movie.release_date} />)}
      </div>

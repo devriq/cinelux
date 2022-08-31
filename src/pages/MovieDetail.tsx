@@ -30,7 +30,7 @@ function MovieDetail() {
       <div className={`w-[250px] h-[370px] items-center justify-center flex overflow-hidden rounded-md`}>
       <img className={`w-full h-full object-cover transition-colors`} src={moviePoster} alt="poster"/>
     </div>
-    <div className='w-[250px] md:w-[60ch] text-justify py-4 md:px-4'>
+    <div className='w-[250px] md:w-[40ch] text-justify py-4 md:px-4'>
       
       <h2 className='text-2xl mb-3'>{movie?.title}</h2>
       <p>{movie?.overview}</p>
