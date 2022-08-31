@@ -1,16 +1,16 @@
 
-![Logo]('./src/assets/cinelux.png')
+![Logo](https://github.com/devriq/cinelux/blob/main/src/assets/cinelux.png)
 
 
 # Cinelux
 
-A movie catalog website connected to the TMDB API.
+A movie serach website consuming the TMDB API.
 
 
 
 ## Tech Stack
 
-**Client:** React, TailwindCSS
+**Client:** ReactJS, TailwindCSS, PostCSS, Typescript
 
 
 ## Deployment
@@ -23,7 +23,7 @@ To deploy this project run the following code inside the project root directory
 ## Features
 
 - Movie detail page
-- Mobile responsive layout
+- Search Movie by keyword
 
 
 ## Authors
