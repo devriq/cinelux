@@ -1,16 +1,15 @@
-
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 
 function App() {
   return (
-    <div className="w-full h-[100vh] flex flex-col justify-between">
-      <Navbar/>
+    <div className="grid place-items-center h-[100vh]">
+      <Navbar />
       <Outlet></Outlet>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App;

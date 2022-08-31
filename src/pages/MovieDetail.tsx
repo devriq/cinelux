@@ -26,7 +26,7 @@ function MovieDetail() {
   }, []);
   
   return (
-    <div className="grid place-items-center md:max-w-[100vw] md:flex items-center justify-center">
+    <div className="grid place-items-center md:flex md:justify-center">
       <div className={`w-[250px] h-[370px] items-center justify-center flex overflow-hidden rounded-md`}>
       <img className={`w-full h-full object-cover transition-colors`} src={moviePoster} alt="poster"/>
     </div>
