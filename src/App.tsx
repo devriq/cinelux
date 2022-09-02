@@ -4,11 +4,11 @@ import Navbar from "./Navbar";
 
 function App() {
   return (
-    <div className="grid place-items-center h-[100vh]">
+    <main className="flex flex-wrap justify-center">
       <Navbar />
       <Outlet></Outlet>
       <Footer />
-    </div>
+    </main>
   );
 }
 

@@ -18,33 +18,37 @@ function Navbar() {
 
   return (
     <>
-      <nav className="w-[95vw] grid mx-auto p-4 place-items-center">
-        <Link to="/" className="">
+      <nav className="">
+        <div className="max-w-[200px] w-[100%] p-0 overflow-hidden">
+
+        <Link to="/" className="m-0 p-0">
           <img
-            className="w-full max-w-[200px] cursor-pointer"
+            className=""
             id="logo"
             src={LOGO}
             alt="logoIMG"
-          />
+            />
         </Link>
+            </div>
 
-        <div className="">
-          <form onSubmit={handleSubmit} className="flex">
+        <div className="max-w-[900px] p-3 w-full overflow-hidden ">
+          <form onSubmit={handleSubmit} className="flex w-full">
             <input
-              className="px-3 py-2 outline-none rounded-bl-2xl rounded-tl-2xl bg-gray-700 hover:bg-gray-800"
+              className="flex-1"
               type="text"
               placeholder="Busque um filme"
               onChange={(e) => setSearch(e.target.value)}
               value={search}
             ></input>
             <button
-              className="px-3 py-2 bg-green-500 rounded-br-2xl rounded-tr-2xl hover:bg-green-600"
+              className="p-5 bg-green-600 text-white"
               type="submit"
             >
               <FaSearch />
             </button>
           </form>
         </div>
+
       </nav>
     </>
   );

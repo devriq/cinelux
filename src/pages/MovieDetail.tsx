@@ -26,16 +26,16 @@ function MovieDetail() {
   }, []);
   
   return (
-    <div className="grid place-items-center md:flex md:justify-center">
-      <div className={`w-[250px] h-[370px] items-center justify-center flex overflow-hidden rounded-md`}>
-      <img className={`w-full h-full object-cover transition-colors`} src={moviePoster} alt="poster"/>
+    <article className="">
+      <div className={``}>
+      <img className={``} src={moviePoster} alt="poster"/>
     </div>
-    <div className='w-[250px] md:w-[40ch] text-justify py-4 md:px-4'>
+    <div className=''>
       
-      <h2 className='text-2xl mb-3'>{movie?.title}</h2>
+      <h2 className=''>{movie?.title}</h2>
       <p>{movie?.overview}</p>
     </div>
-    </div>
+    </article>
   )
 }
 

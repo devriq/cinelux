@@ -1,13 +1,13 @@
-import React from "react";
-
 const Footer = () => {
+  //set the year of footer element dynamicly
+  const footerDate = new Date();
+
   return (
-    <div className="grid place-items-center p-6">
+    <footer className="p-5">
       <span className="font-semibold text-xs">
-        {" "}
-        Copyright &copy; DEVriq 2022. Todos os direitos reservados.
+        Copyright &copy; {`DEVriq ${footerDate.getFullYear()}. Todos os direitos reservados.`}
       </span>
-    </div>
+    </footer>
   );
 };
 

@@ -5,30 +5,34 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import MovieCard from '../MovieCard';
+import HomeImage from '../assets/undraw_horror_movie_category.svg'
 
 function Home() {
   
-  const moviesURL = import.meta.env.VITE_API;
-  const apiKey = import.meta.env.VITE_API_KEY; 
+  // const moviesURL = import.meta.env.VITE_API;
+  // const apiKey = import.meta.env.VITE_API_KEY; 
 
-  const [topMovies, setTopMovies] = useState([]);
+  // const [topMovies, setTopMovies] = useState([]);
 
-  const getTopRatdMovies = async ({ url }: { url: any; }): Promise<void> => {
-    await axios.get(url)
-      .then((response) => setTopMovies(response.data.results));
-  };
+  // const getTopRatdMovies = async ({ url }: { url: any; }): Promise<void> => {
+  //   await axios.get(url)
+  //     .then((response) => setTopMovies(response.data.results));
+  // };
 
-  useEffect(() => {
-    const apiURL = `${moviesURL}top_rated?api_key=${apiKey}`;
-    getTopRatdMovies({ url: apiURL });
-  }, []);
+  // useEffect(() => {
+  //   const apiURL = `${moviesURL}top_rated?api_key=${apiKey}`;
+  //   getTopRatdMovies({ url: apiURL });
+  // }, []);
 
   return (
-    <div className="flex flex-wrap justify-center">
-      {topMovies.map((movie:Movie): JSX.Element=>
-      <MovieCard key={movie.id} id={movie.id} title={movie.title} overview={movie.overview} poster_path={movie.poster_path} release_date={movie.release_date} />)}
-    </div>
+    <section className="grid max-w-[100vw] my-[3rem]">
+      <img src={HomeImage} className="w-[300px] max-w-[600px] mx-auto"/>
+    </section>
   )
+      {/* {topMovies.map((movie:Movie): JSX.Element=>
+      <MovieCard key={movie.id} id={movie.id} title={movie.title} overview={movie.overview} poster_path={movie.poster_path} release_date={movie.release_date} />)}
+    </section> */}
+  
 }
 
 export default Home

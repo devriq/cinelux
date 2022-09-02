@@ -7,19 +7,15 @@ export default function MovieCard(movie: Movie): JSX.Element {
   // const movieState = props.status[0][`movie:${props.movie.id}`];
 
   return (
-    <Link to={`/movie/${movie.id}`}>
-      <div
-        className={`hover:grayscale-0 scale-95 hover:scale-100 transition-all justify-between rounded`}
+    <Link to={`/movie/${movie.id}`} className="p-1 group w-[10rem]" >
+    <div
+        className={`group-hover:grayscale-0 scale-95 group-hover:scale-100 transition-all rounded`}
       >
-        <div
-          className={`w-[200px] h-[320px] overflow-hidden rounded-xl bg-cover`}
-        >
           <img
-            className={`w-full h-full object-cover transition-colors`}
+            className={`transition-colors`}
             src={moviePoster}
             alt={movie.title}
           />
-        </div>
       </div>
     </Link>
   );
