@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 function App() {
   return (
-    <main className="flex flex-wrap justify-center">
+    <main className="min-h-screen flex flex-col justify-between">
       <Navbar />
       <Outlet></Outlet>
       <Footer />

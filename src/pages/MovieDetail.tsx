@@ -26,16 +26,16 @@ function MovieDetail() {
   }, []);
   
   return (
-    <article className="">
-      <div className={``}>
+    <section className="flex flex-col items-center justify-center p-4">
+      <div className={`w-[240px]`}>
       <img className={``} src={moviePoster} alt="poster"/>
     </div>
-    <div className=''>
+    <div className='py-4 mb-6'>
       
-      <h2 className=''>{movie?.title}</h2>
-      <p>{movie?.overview}</p>
+      <h1 className='mb-3 text-center'>{movie?.title}</h1>
+      <p className='leading-relaxed text-justify text-sm max-w-[50ch]'>{movie?.overview}</p>
     </div>
-    </article>
+    </section>
   )
 }
 

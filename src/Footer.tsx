@@ -3,8 +3,8 @@ const Footer = () => {
   const footerDate = new Date();
 
   return (
-    <footer className="p-5">
-      <span className="font-semibold text-xs">
+    <footer className="h-[10vh] grid text-center text-xs place-items-center">
+      <span className="font-semibold">
         Copyright &copy; {`DEVriq ${footerDate.getFullYear()}. Todos os direitos reservados.`}
       </span>
     </footer>

@@ -25,8 +25,8 @@ function Home() {
   // }, []);
 
   return (
-    <section className="grid max-w-[100vw] my-[3rem]">
-      <img src={HomeImage} className="w-[300px] max-w-[600px] mx-auto"/>
+    <section className="">
+      <img src={HomeImage} className="h-full w-[90%] max-w-[300px] mx-auto"/>
     </section>
   )
       {/* {topMovies.map((movie:Movie): JSX.Element=>
