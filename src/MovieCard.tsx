@@ -7,9 +7,9 @@ export default function MovieCard(movie: Movie): JSX.Element {
   // const movieState = props.status[0][`movie:${props.movie.id}`];
 
   return (
-    <Link to={`/movie/${movie.id}`} className="group w-[15rem] shadow-sm shadow-black" >
+    <Link to={`/movie/${movie.id}`} className="group w-[10rem]" >
     <div
-        className={`card group-hover:grayscale-0 overflow-hidden scale-95 group-hover:scale-100 transition-all rounded`}
+        className={`card object-cover group-hover:grayscale-0 overflow-hidden scale-95 group-hover:scale-100 transition-all rounded`}
       >
           <img
             className={``}

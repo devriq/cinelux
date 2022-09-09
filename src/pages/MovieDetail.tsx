@@ -13,6 +13,7 @@ function MovieDetail() {
   const {id} = useParams();
   const [movie, setMovie] = useState<Movie>();
   const moviePoster = import.meta.env.VITE_API_IMG + movie?.poster_path;
+  const movieBackdrop = import.meta.env.VITE_API_IMG + movie?.backdrop_path;
   
   const getMovie = async ({ url }: { url: any; }): Promise<void> => {
     await axios.get(url)
@@ -22,19 +23,27 @@ function MovieDetail() {
   useEffect(() => {
     const apiURL = `${movieURL}${id}?api_key=${apiKey}`;
     getMovie({ url: apiURL });
-    console.log(movie)
   }, []);
   
+  console.log(movie)  
+
+
+
   return (
-    <section className="flex flex-col items-center justify-center p-4">
-      <div className={`w-[240px]`}>
+    <section className="flex flex-col items-center justify-center bg-cover">
+      <div className={`w-[80vw] max-w-[300px]`}>
       <img className={``} src={moviePoster} alt="poster"/>
     </div>
-    <div className='py-4 mb-6'>
+    <div className='py-4 mx-auto mb-6 max-w-[80vw]'>
       
-      <h1 className='mb-3 text-center'>{movie?.title}</h1>
-      <p className='leading-relaxed text-justify text-sm max-w-[50ch]'>{movie?.overview}</p>
+      <h1 className='mb-3 text-center'>{movie?.title} - {movie?.original_title}</h1>
+      <h3 className='mb-3 text-center'>{movie?.tagline}</h3>
+      <p className='leading-relaxed text-justify text-sm'>{movie?.overview}</p>
+      <div className='flex justify-center text-center gap-3'>
+      {movie?.genres.map((genre: { name: any; }) => <span>{genre.name}</span>)}
+      </div>
     </div>
+    <img src={movieBackdrop}/>
     </section>
   )
 }

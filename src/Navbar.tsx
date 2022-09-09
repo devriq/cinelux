@@ -17,7 +17,7 @@ function Navbar() {
   };
 
   return (
-      <nav className="mx-auto max-h-[20vh] overflow-hidden">
+      <nav className="nav-center">
         <div className="">
 
         <Link to="/" className="">
@@ -40,7 +40,7 @@ function Navbar() {
               value={search}
             ></input>
             <button
-              className="w-full px-3 bg-green-500 hover:bg-green-600 text-white "
+              className="btn w-full bg-green-500 hover:bg-green-600 text-white "
               type="submit"
             >
               <FaSearch />
