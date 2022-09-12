@@ -1,10 +1,10 @@
-import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <main className="min-h-screen flex flex-col justify-between">
+    <main className="flex flex-col justify-between min-h-screen">
       <Navbar />
       <Outlet></Outlet>
       <Footer />

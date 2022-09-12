@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import MovieCard from "../MovieCard";
-import Movie from "../Movie";
+import MovieCard from "../components/MovieCard/MovieCard";
+import Movie from "../models/Movie";
 
 function Search() {
   const searchURL = import.meta.env.VITE_API_SEARCH;
@@ -27,7 +27,7 @@ function Search() {
   }, [query]);
 
   return (
-    <section className="py-4 gap-4 flex flex-wrap justify-center">
+    <section className="flex flex-wrap justify-center">
       {searchMovies.map((movie: Movie) => (
         <MovieCard
           key={movie.id}

@@ -5,70 +5,32 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root{
-    --clr-primary:#8685EF;
-    --clr-bg-dark:#333333;
-    --clr-text-color:#FAF7FF;
-    --ff-primary:"Fira Code";
-    --clr-card-bg:#4A4857;
+:root {
+  --clr-bg-darker: #111;
+  --clr-bg-dark: #222;
+  --clr-text-color: #fff;
+  --ff-primary: "Fira Code";
 }
 
-
-*{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;   
-    /*Dev Option*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*Dev Option*/
 }
 
-
-
-body{
-     /*DarkMode*/
-    background-color:#111;
-    color:var(--clr-text-color);
-    font-family: var(--ff-primary);
+body {
+  /*DarkMode*/
+  background-color: #111;
+  color: var(--clr-text-color);
+  font-family: var(--ff-primary);
 }
 
-body> * {
-    margin: 0 auto;
-    width:90%;
+body > * {
+  margin: 0 auto;
+  width: 90%;
 }
 
-.nav-center {
-    width: 90vw;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-  }
-  .nav-center span {
-    font-size: 2.5rem;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-  }
-
-  .query{
-    background-color: var(--clr-card-bg);
-    color: var(--clr-text-color);
-  }
-
-  .btn {
-    background: var(--clr-primary);
-    color: var(--clr-text-color);
-    padding: 0.25rem 0.5rem;
-    border-color: transparent;
-    text-transform: capitalize;
-    transition: all 0.3s linear;
-    font-weight: bold;
-    letter-spacing: 2px;
-    cursor: pointer;
-  }
-  
-
-.Yes{
-    filter: grayscale(1);
+section {
+  background-color: #111;
 }
