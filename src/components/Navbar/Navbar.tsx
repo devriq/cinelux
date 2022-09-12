@@ -17,10 +17,10 @@ function Navbar() {
   };
 
   return (
-      <nav className="md:flex items-center justify-center bg-[#111] md:justify-evenly mb-4 py-2">
-        <div className="w-[50%] md:w-[20%] mx-auto">
+      <nav className="md:flex items-center justify-between bg-[#111] md:justify-evenly mb-4 py-2">
+        <div className="w-[40%] md:w-[20%] lg:w-[15%] mx-auto">
 
-        <Link to="/" className="w-[200px] mx-auto ">
+        <Link to="/" className="w-[100px] mx-auto ">
           <img
             className=""
             id="logo"
@@ -31,9 +31,9 @@ function Navbar() {
         </div>
 
         <div className="w-full mx-auto max-w-[500px] flex items-center">
-          <form onSubmit={handleSubmit} className=" w-full mx-auto flex">
+          <form onSubmit={handleSubmit} className=" w-full flex-1 mx-auto flex hover:outline">
             <input
-              className="w-[80vw] p-2 min-h-full bg-gray-800 hover:bg-gray-600"
+              className="w-[100%] p-2 bg-gray-800 hover:bg-gray-600"
               type="text"
               placeholder="Busque por um filme"
               onChange={(e) => setSearch(e.target.value)}
