@@ -35,7 +35,7 @@ function Navbar() {
             <input
               className="w-[100%] p-2 bg-gray-800 hover:bg-gray-600"
               type="text"
-              placeholder="Busque por um filme"
+              placeholder="Search for a movie"
               onChange={(e) => setSearch(e.target.value)}
               value={search}
             />
