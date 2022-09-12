@@ -1,17 +1,21 @@
 
-![Logo](https://github.com/devriq/cinelux/blob/main/src/assets/cinelux.png)
-
+<div align="center">
+<img width=200 src="https://github.com/devriq/cinelux/blob/main/src/assets/cinelux.png"/>
+</div>
 
 # Cinelux
 
-A movie serach website consuming the TMDB API.
+A movie search website consuming the TMDB API.
 
-
+## Screenshots
+- Desktop
+<img src="https://github.com/devriq/cinelux/blob/main/src/assets/cinelux-desktop-ex.gif">
+- Mobile
+<img  width="300" src="https://github.com/devriq/cinelux/blob/main/src/assets/cinelux-mobile-ex.gif">
 
 ## Tech Stack
 
-**Client:** ReactJS, TailwindCSS, PostCSS, Typescript
-
+**Client:** ReactJS, TailwindCSS, Typescript
 
 ## Deployment
 
